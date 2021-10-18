@@ -1,0 +1,12 @@
+<ngb-accordion [closeOthers]="true" activeIds="static-1">
+  <ngb-panel
+    *ngFor="let question of questions; let i = index"
+    [id]="'static-' + (i + 1)"
+    [title]="question.title"
+  >
+    {{ i }}
+    <ng-template ngbPanelContent>
+      {{ question.answer }}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

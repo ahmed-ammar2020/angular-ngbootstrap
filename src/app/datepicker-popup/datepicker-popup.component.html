@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center align-items-center">
+  <form class="form-inline">
+    <div class="form-group">
+      <div class="input-group">
+        <input
+          class="form-control"
+          placeholder="yyyy-mm-dd"
+          name="dp"
+          [(ngModel)]="model"
+          ngbDatepicker
+          #d="ngbDatepicker"
+        />
+        <div class="input-group-append">
+          <fa-icon
+            [icon]="faCalendarAlt"
+            (click)="d.toggle()"
+            class="icon-coffee"
+          ></fa-icon>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<hr />
+<pre>Model: {{ model | json }}</pre>
